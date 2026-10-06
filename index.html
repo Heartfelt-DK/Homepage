@@ -8,11 +8,11 @@
 <meta property="og:title" content="Heartfelt – Senior HR og rekruttering som et abonnement">
 <meta property="og:description" content="En erfaren HR- og TA-partner fra få timer om måneden til to dage om ugen. Skalér op, når I vokser.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#F3F5F1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231D6A4D'/%3E%3Ctext x='16' y='23' font-family='sans-serif' font-size='20' font-weight='700' fill='%23fff' text-anchor='middle'%3Eh%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#F6F7F7">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script src="script.js" defer></script>
 </head>
@@ -22,7 +22,7 @@
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a href="#top" class="logo">heartfelt</a>
+    <a href="#top" class="logo" aria-label="Heartfelt – til toppen"><img src="assets/logo.svg" alt="heartfelt" width="160" height="36"></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="hovedmenu">Menu</button>
     <nav id="hovedmenu" class="main-nav" aria-label="Hovedmenu">
       <a href="#model">Sådan virker det</a>
@@ -39,16 +39,20 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <div class="eyebrow">Fraktioneret HR &amp; Talent Acquisition til startups og scale-ups</div>
-      <h1>Senior HR og rekruttering – som et abonnement.</h1>
+      <p class="kicker">Fraktioneret HR &amp; Talent Acquisition til startups og scale-ups</p>
+      <h1>
+        <span class="line"><span>Senior HR og</span></span>
+        <span class="line"><span>rekruttering –</span></span>
+        <span class="line"><span>som et <em class="swash-word">abonnement.<svg class="swash" viewBox="0 0 320 34" aria-hidden="true" preserveAspectRatio="none"><path d="M4 26 C 70 16, 150 10, 214 16 C 262 20, 290 24, 316 6" pathLength="1"/></svg></em></span></span>
+      </h1>
       <p class="lead">I får en erfaren HR- og TA-partner fra få timer om måneden til to dage om ugen. Skalér op, når I vokser. Ned igen, når behovet falder.</p>
       <div class="actions">
         <a href="#kontakt" class="btn btn-primary">Book et gratis HR-sundhedstjek</a>
-        <a href="#niveauer" class="text-link">Se de tre niveauer</a>
+        <a href="#niveauer" class="text-link">Se de tre niveauer <span aria-hidden="true">→</span></a>
       </div>
     </div>
 
-    <div class="picker card">
+    <div class="picker">
       <h2 class="picker-title" id="picker-title">Hvor mange er I?</h2>
       <div class="size-buttons" role="group" aria-labelledby="picker-title">
         <button type="button" data-size="a" aria-pressed="false">5–15</button>
@@ -57,23 +61,27 @@
       </div>
       <div class="recommendation" aria-live="polite">
         <div class="rec" data-rec="a" hidden>
-          <div class="eyebrow eyebrow-sm">Typisk det rette niveau</div>
+          <div class="rec-label">Typisk det rette niveau</div>
           <div class="rec-name">Sparring</div>
           <div class="rec-time">4–6 timer om måneden</div>
           <p>Ad hoc rådgivning, faste kontortider og skabeloner til kontrakter og processer. Til jer, hvor founderen stadig klarer det meste selv.</p>
         </div>
         <div class="rec" data-rec="b">
-          <div class="eyebrow eyebrow-sm">Typisk det rette niveau</div>
+          <div class="rec-label">Typisk det rette niveau</div>
           <div class="rec-name">Vækst</div>
           <div class="rec-time">Én fast dag om ugen</div>
           <p>En tæt HR-partner med løbende rekrutteringsstøtte. Til jer, der lige har rejst funding eller vokser hurtigt.</p>
         </div>
         <div class="rec" data-rec="c" hidden>
-          <div class="eyebrow eyebrow-sm">Typisk det rette niveau</div>
+          <div class="rec-label">Typisk det rette niveau</div>
           <div class="rec-name">Fraktioneret Partner</div>
           <div class="rec-time">To dage om ugen</div>
           <p>Strategisk sparring, fuld rekrutteringsproces og employer branding. Som at have en Head of People – uden fuldtidsomkostningen.</p>
         </div>
+      </div>
+      <div class="meter" aria-hidden="true">
+        <div class="meter-track"><div class="meter-fill"></div></div>
+        <div class="meter-scale"><span>Få timer</span><span>To dage om ugen</span></div>
       </div>
     </div>
   </div>
@@ -90,39 +98,43 @@
 </section>
 
 <section id="model" class="section">
-  <div class="wrap stack-48">
-    <h2 class="h2 narrow">En HR-chef på deltid – ikke en konsulent på besøg.</h2>
-    <div class="pillars">
-      <div class="pillar">
+  <div class="wrap model">
+    <h2 class="h2 statement">En HR-chef på deltid – <em>ikke en konsulent på besøg.</em></h2>
+    <ol class="pillars">
+      <li class="pillar">
+        <span class="pillar-num">01</span>
         <h3>En del af ledelsen</h3>
         <p>Jeg sidder med ved ledermøderne, former kulturen og fører people-strategien ud i livet – i stedet for at aflevere en rapport og gå igen.</p>
-      </div>
-      <div class="pillar">
+      </li>
+      <li class="pillar">
+        <span class="pillar-num">02</span>
         <h3>Fast tid hver måned</h3>
         <p>I køber et fast antal timer eller dage – for eksempel én dag om ugen – afstemt efter, hvor komplekse I er lige nu.</p>
-      </div>
-      <div class="pillar">
+      </li>
+      <li class="pillar">
+        <span class="pillar-num">03</span>
         <h3>Til jer midt imellem</h3>
         <p>I er vokset fra at klare HR selv, men kan endnu ikke forsvare en fuldtids HR-chef. Det er præcis det hul, modellen dækker.</p>
-      </div>
-    </div>
+      </li>
+    </ol>
   </div>
 </section>
 
 <section id="niveauer" class="section section-tint">
-  <div class="wrap stack-48">
+  <div class="wrap stack-56">
     <div class="section-head">
-      <h2 class="h2">Tre niveauer. Ét abonnement, der følger jer.</h2>
+      <h2 class="h2">Tre niveauer. <em>Ét abonnement, der følger jer.</em></h2>
       <p class="muted">Vælg det niveau, der passer til jeres fase lige nu. I kan altid skalere op eller ned.</p>
     </div>
     <div class="tiers">
       <article class="tier" data-tier="a">
         <div class="tier-top">
           <div class="tier-size">5–15 ansatte</div>
-          <div class="badge" hidden>Passer til jeres størrelse</div>
+          <div class="badge" hidden>Passer til jer</div>
         </div>
         <h3 class="tier-name">Sparring</h3>
         <div class="tier-time">4–6 timer om måneden</div>
+        <div class="tier-bar" style="--w: 9%" aria-hidden="true"><span></span></div>
         <p class="muted">Til jer, der lige er i gang og har brug for en erfaren at ringe til.</p>
         <ul class="dots">
           <li>Ad hoc adgang til rådgivning</li>
@@ -135,10 +147,11 @@
       <article class="tier is-active" data-tier="b">
         <div class="tier-top">
           <div class="tier-size">15–50 ansatte</div>
-          <div class="badge">Passer til jeres størrelse</div>
+          <div class="badge">Passer til jer</div>
         </div>
         <h3 class="tier-name">Vækst</h3>
         <div class="tier-time">Én fast dag om ugen</div>
+        <div class="tier-bar" style="--w: 50%" aria-hidden="true"><span></span></div>
         <p class="muted">Til jer, der vokser og har brug for en tæt HR-partner i hverdagen.</p>
         <ul class="dots">
           <li>Alt i Sparring</li>
@@ -151,10 +164,11 @@
       <article class="tier" data-tier="c">
         <div class="tier-top">
           <div class="tier-size">50–150 ansatte</div>
-          <div class="badge" hidden>Passer til jeres størrelse</div>
+          <div class="badge" hidden>Passer til jer</div>
         </div>
         <h3 class="tier-name">Fraktioneret Partner</h3>
         <div class="tier-time">To dage om ugen</div>
+        <div class="tier-bar" style="--w: 100%" aria-hidden="true"><span></span></div>
         <p class="muted">Som at have en Head of People – uden fuldtidsomkostningen.</p>
         <ul class="dots">
           <li>Strategisk sparring med ledelsen</li>
@@ -164,18 +178,18 @@
         <div class="tier-price">Fra [PRIS] kr./md.</div>
       </article>
     </div>
-    <p class="muted">Alle samarbejder kan starte med en kort prøveperiode.</p>
+    <p class="muted small">Alle samarbejder kan starte med en kort prøveperiode.</p>
   </div>
 </section>
 
 <section id="delydelser" class="section">
   <div class="wrap services">
-    <div class="section-head">
-      <h2 class="h2">Eller vælg præcis det, I mangler.</h2>
+    <div class="section-head services-head">
+      <h2 class="h2">Eller vælg præcis det, <em>I mangler.</em></h2>
       <p class="muted">Køb én delydelse, flere eller det hele – enkeltstående eller som en del af abonnementet.</p>
     </div>
-    <div class="card service-list">
-      <h3 class="eyebrow">Rekruttering</h3>
+    <div class="service-list">
+      <h3>Rekruttering</h3>
       <ul>
         <li>Rolleafklaring &amp; jobprofil</li>
         <li>Jobopslag &amp; employer branding-tekst</li>
@@ -185,8 +199,8 @@
         <li>Onboarding-plan</li>
       </ul>
     </div>
-    <div class="card service-list">
-      <h3 class="eyebrow">Øvrig HR</h3>
+    <div class="service-list">
+      <h3>Øvrig HR</h3>
       <ul>
         <li>Ansættelseskontrakter &amp; compliance</li>
         <li>Personalehåndbog &amp; politikker</li>
@@ -199,7 +213,7 @@
 </section>
 
 <section class="section section-flush-top">
-  <div class="wrap stack-40">
+  <div class="wrap stack-48">
     <h2 class="h2">Sådan starter vi</h2>
     <ol class="steps">
       <li><div class="step-num">1</div><h3>Gratis HR-sundhedstjek</h3><p class="muted">En uforpligtende samtale om, hvor I er, og hvad der haster mest.</p></li>
@@ -215,20 +229,23 @@
     <!-- Erstat med: <img class="portrait" src="heidi.jpg" alt="Heidi Wassini"> -->
     <div class="portrait portrait-placeholder">[Portræt af Heidi]</div>
     <div class="about-copy">
-      <h2 class="h2">Jeg har selv bygget det, I skal til at bygge.</h2>
+      <h2 class="h2">Jeg har selv bygget det, <em>I skal til at bygge.</em></h2>
       <p class="muted">Som Global Head of Talent Acquisition &amp; Employer Branding hos Vivino stod jeg i spidsen for TA-funktionen i en virksomhed i rivende vækst. [Indsæt konkret resultat fra Vivino.]</p>
       <p class="muted">Før det arbejdede jeg med HR og rekruttering hos Telenor og Ramboll. Fra 5 til 10.000 ansatte – jeg kender både kaosset i en startup og de processer, der skal til, når I skalerer.</p>
-      <div class="signature">Heidi Wassini, ejer &amp; stifter af Heartfelt</div>
+      <div class="signature"><span class="signature-name">Heidi Wassini</span><span>Ejer &amp; stifter af Heartfelt</span></div>
     </div>
   </div>
 </section>
 
 <section id="kontakt" class="section section-dark">
+  <svg class="cta-heart" viewBox="0 0 600 420" aria-hidden="true">
+    <path pathLength="1" d="M-20 392 C 120 400, 230 396, 300 380 C 220 320, 130 262, 112 184 C 96 112, 146 62, 206 66 C 256 70, 290 112, 300 150 C 312 108, 350 66, 404 66 C 468 68, 508 124, 488 196 C 466 274, 380 330, 300 380 C 380 396, 500 400, 640 392"/>
+  </svg>
   <div class="wrap cta">
-    <h2 class="h2-xl">Start med et gratis HR-sundhedstjek.</h2>
+    <h2 class="h2-xl">Start med et gratis <em>HR-sundhedstjek.</em></h2>
     <p class="cta-lead">Vi taler om jeres behov, og bagefter sender jeg et oplæg, der matcher, hvor I er lige nu. Gratis og uforpligtende.</p>
     <div class="actions">
-      <a href="mailto:heidi@heartfelt.biz?subject=HR-sundhedstjek" class="btn btn-light">Book et gratis HR-sundhedstjek</a>
+      <a href="mailto:heidi@heartfelt.biz?subject=HR-sundhedstjek" class="btn btn-primary">Book et gratis HR-sundhedstjek</a>
       <a href="tel:+4529211227" class="text-link text-link-light">Ring 29 21 12 27</a>
     </div>
   </div>
@@ -239,7 +256,7 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="footer-col">
-      <div class="logo logo-footer">heartfelt</div>
+      <img class="logo-footer" src="assets/logo-light.svg" alt="heartfelt" width="130" height="29">
       <div>Heartfelt results. Real business impact.</div>
     </div>
     <div class="footer-col">

@@ -1,10 +1,17 @@
 document.documentElement.classList.add('js');
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Størrelsesvælger: viser anbefalet niveau og fremhæver det matchende kort
+  // Hero-indgang: starter når fonte er klar, så linjerne ikke hopper
+  const ready = () => requestAnimationFrame(() => document.documentElement.classList.add('is-ready'));
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(ready);
+  setTimeout(ready, 1200);
+
+  // Størrelsesvælger: viser anbefalet niveau, fylder måleren og fremhæver det matchende kort
   const buttons = document.querySelectorAll('.size-buttons button');
   const recs = document.querySelectorAll('.rec');
   const tiers = document.querySelectorAll('.tier');
+  const meter = document.querySelector('.meter-fill');
+  const meterWidth = { a: '9%', b: '50%', c: '100%' };
 
   function select(size) {
     buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.size === size)));
@@ -14,9 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
       t.classList.toggle('is-active', on);
       t.querySelector('.badge').hidden = !on;
     });
+    meter.style.setProperty('--meter', meterWidth[size]);
   }
 
   buttons.forEach(b => b.addEventListener('click', () => select(b.dataset.size)));
+
+  // Hjertelinjen i kontaktsektionen tegnes én gang, når den kommer i syne
+  const heart = document.querySelector('.cta-heart');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      if (entries.some(e => e.isIntersecting)) { heart.classList.add('is-drawn'); io.disconnect(); }
+    }, { threshold: 0.35 });
+    io.observe(heart);
+  } else {
+    heart.classList.add('is-drawn');
+  }
 
   // Mobilmenu
   const toggle = document.querySelector('.menu-toggle');
