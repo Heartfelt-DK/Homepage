@@ -9,21 +9,43 @@
 <meta property="og:description" content="En erfaren HR- og TA-partner fra få timer om måneden til to dage om ugen. Skalér op, når I vokser.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#F6F7F7">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script src="script.js" defer></script>
+<link rel="alternate" hreflang="da" href="https://heartfelt-homepage.vercel.app/">
+<link rel="alternate" hreflang="en" href="https://heartfelt-homepage.vercel.app/en/">
+<link rel="alternate" hreflang="x-default" href="https://heartfelt-homepage.vercel.app/en/">
+<link rel="stylesheet" href="/styles.css">
+<script src="/script.js" defer></script>
 </head>
 <body id="top">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="flag-circle"><circle cx="15" cy="15" r="15"/></clipPath>
+    <g id="flag-da" clip-path="url(#flag-circle)"><rect width="30" height="30" fill="#C8102E"/><rect x="9" width="4" height="30" fill="#fff"/><rect y="13" width="30" height="4" fill="#fff"/></g>
+    <g id="flag-en" clip-path="url(#flag-circle)"><rect width="30" height="30" fill="#012169"/><path d="M0 0L30 30M30 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0L30 30M30 0L0 30" stroke="#C8102E" stroke-width="2"/><path d="M15 0V30M0 15H30" stroke="#fff" stroke-width="10"/><path d="M15 0V30M0 15H30" stroke="#C8102E" stroke-width="6"/></g>
+  </defs>
+</svg>
 
 <a class="skip" href="#indhold">Spring til indhold</a>
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a href="#top" class="logo" aria-label="Heartfelt – til toppen"><img src="assets/logo.svg" alt="heartfelt" width="160" height="36"></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="hovedmenu">Menu</button>
+    <a href="#top" class="logo" aria-label="Heartfelt – til toppen"><img src="/assets/logo.svg" alt="heartfelt" width="160" height="36"></a>
+    <div class="header-tools">
+      <div class="lang">
+        <button class="lang-toggle" type="button" aria-expanded="false" aria-controls="sprogvalg" aria-label="Sprog: dansk. Skift sprog">
+          <svg class="flag" viewBox="0 0 30 30" aria-hidden="true"><use href="#flag-da"/></svg>
+          <svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg>
+        </button>
+        <ul class="lang-menu" id="sprogvalg" hidden>
+          <li><a href="/" lang="da" hreflang="da" data-lang="da" aria-current="true"><svg class="flag" viewBox="0 0 30 30" aria-hidden="true"><use href="#flag-da"/></svg>Dansk</a></li>
+          <li><a href="/en/" lang="en" hreflang="en" data-lang="en"><svg class="flag" viewBox="0 0 30 30" aria-hidden="true"><use href="#flag-en"/></svg>English</a></li>
+        </ul>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="hovedmenu">Menu</button>
+    </div>
     <nav id="hovedmenu" class="main-nav" aria-label="Hovedmenu">
       <a href="#model">Sådan virker det</a>
       <a href="#niveauer">Niveauer</a>
@@ -141,7 +163,7 @@
           <li>Faste kontortider</li>
           <li>Skabeloner til kontrakter og processer</li>
         </ul>
-        <div class="tier-price">Fra [PRIS] kr./md.</div>
+        <div class="tier-price"><a href="#kontakt">Kontakt mig for pris <span aria-hidden="true">→</span></a></div>
       </article>
 
       <article class="tier is-active" data-tier="b">
@@ -158,7 +180,7 @@
           <li>Løbende rekrutteringsstøtte</li>
           <li>Search og screening til én rolle ad gangen</li>
         </ul>
-        <div class="tier-price">Fra [PRIS] kr./md.</div>
+        <div class="tier-price"><a href="#kontakt">Kontakt mig for pris <span aria-hidden="true">→</span></a></div>
       </article>
 
       <article class="tier" data-tier="c">
@@ -175,7 +197,7 @@
           <li>Fuld rekrutteringsproces</li>
           <li>Employer branding</li>
         </ul>
-        <div class="tier-price">Fra [PRIS] kr./md.</div>
+        <div class="tier-price"><a href="#kontakt">Kontakt mig for pris <span aria-hidden="true">→</span></a></div>
       </article>
     </div>
     <p class="muted small">Alle samarbejder kan starte med en kort prøveperiode.</p>
@@ -226,10 +248,10 @@
 
 <section id="heidi" class="section section-tint">
   <div class="wrap about">
-    <img class="portrait" src="assets/heidi.jpg" alt="Portræt af Heidi Wassini" width="450" height="450" loading="lazy">
+    <img class="portrait" src="/assets/heidi.jpg" alt="Portræt af Heidi Wassini" width="450" height="450" loading="lazy">
     <div class="about-copy">
       <h2 class="h2">Jeg har selv bygget det, <em>I skal til at bygge.</em></h2>
-      <p class="muted">Som Global Head of Talent Acquisition &amp; Employer Branding hos Vivino stod jeg i spidsen for TA-funktionen i en virksomhed i rivende vækst. [Indsæt konkret resultat fra Vivino.]</p>
+      <p class="muted">Som Global Head of Talent Acquisition &amp; Employer Branding hos Vivino stod jeg i spidsen for TA-funktionen i en virksomhed i rivende vækst.</p>
       <p class="muted">Før det arbejdede jeg med HR og rekruttering hos Telenor og Ramboll. Fra 5 til 10.000 ansatte – jeg kender både kaosset i en startup og de processer, der skal til, når I skalerer.</p>
       <div class="signature"><span class="signature-name">Heidi Wassini</span><span>Ejer &amp; stifter af Heartfelt</span></div>
     </div>
@@ -255,7 +277,7 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="footer-col">
-      <img class="logo-footer" src="assets/logo-light.svg" alt="heartfelt" width="130" height="29">
+      <img class="logo-footer" src="/assets/logo-light.svg" alt="heartfelt" width="130" height="29">
       <div>Heartfelt results. Real business impact.</div>
     </div>
     <div class="footer-col">

@@ -37,9 +37,25 @@ document.addEventListener('DOMContentLoaded', () => {
     heart.classList.add('is-drawn');
   }
 
+  // Sprogvælger: husker valget i en cookie, som omdirigeringen på Vercel respekterer
+  const langToggle = document.querySelector('.lang-toggle');
+  const langMenu = document.querySelector('.lang-menu');
+  const setLang = open => {
+    langMenu.hidden = !open;
+    langToggle.setAttribute('aria-expanded', String(open));
+  };
+  langToggle.addEventListener('click', () => setLang(langMenu.hidden));
+  document.addEventListener('click', e => { if (!e.target.closest('.lang')) setLang(false); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !langMenu.hidden) { setLang(false); langToggle.focus(); }
+  });
+  langMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    document.cookie = `lang=${a.dataset.lang}; path=/; max-age=31536000; samesite=lax`;
+  }));
+
   // Mobilmenu
   const toggle = document.querySelector('.menu-toggle');
-  const nav = document.getElementById('hovedmenu');
+  const nav = document.querySelector('.main-nav');
   toggle.addEventListener('click', () => {
     const open = nav.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', String(open));
