@@ -10,6 +10,5 @@ Ingen build-trin: åbn `index.html` direkte eller deploy mappen som statisk site
 
 ## Mangler før lancering
 - Priser (`[PRIS]`) under "Tre niveauer"
-- Portræt af Heidi
 - Konkret resultat fra Vivino
 - Link til karrierecoaching i footeren
