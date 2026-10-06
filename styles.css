@@ -311,6 +311,10 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 .tier-time { font-size: 18px; font-weight: 600; color: var(--petrol); margin-top: -6px; }
 .tier-bar { height: 4px; border-radius: 99px; background: var(--tint); overflow: hidden; }
 .tier-bar span { display: block; height: 100%; width: var(--w); background: var(--petrol); border-radius: inherit; }
+/* "Efter behov": stiplet bjælke = variabel mængde, ikke den største faste pakke */
+.tier-bar.is-flex span, .meter-fill.is-flex {
+  background: repeating-linear-gradient(90deg, var(--sky) 0 10px, transparent 10px 16px);
+}
 .tier-price { border-top: 1px solid var(--line-soft); padding-top: 18px; font-size: 18px; font-weight: 700; }
 
 .dots { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; flex-grow: 1; }

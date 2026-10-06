@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       t.querySelector('.badge').hidden = !on;
     });
     meter.style.setProperty('--meter', meterWidth[size]);
+    meter.classList.toggle('is-flex', size === 'c');
   }
 
   buttons.forEach(b => b.addEventListener('click', () => select(b.dataset.size)));
