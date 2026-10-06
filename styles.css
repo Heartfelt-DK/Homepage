@@ -1,23 +1,25 @@
-/* Heartfelt – Editorial varm.
-   Petrol er blæk, hindbær er hjertet (eneste accent). Rytme: editorial slow. */
+/* Heartfelt – matcher heartfelt.biz: DIN-lignende overskrifter i logoets blå (Barlow ~ DIN Next Light),
+   Enriqueta som serif-stemme i varm grå, hindbær fra logoet som eneste accent. Rytme: editorial slow. */
 :root {
-  --paper: #F6F7F7;
-  --tint: #ECF0F2;
+  --paper: #FAFAF9;
+  --tint: #F1F0EE;
   --white: #FFFFFF;
-  --ink: #0C2B3B;          /* dyb petrol – tekst */
+  --ink: #3F3C39;          /* varm mørkegrå – tekst (heartfelt.biz #585551, lidt mørkere for læsbarhed) */
   --petrol: #095B80;       /* logoets blå */
-  --petrol-deep: #082433;  /* mørke sektioner */
+  --petrol-deep: #07445F;  /* mørk udgave af logoets blå – mørke sektioner */
+  --sky: #55889E;          /* heartfelt.biz' lyse stålblå */
   --rasp: #AE2B4A;         /* logoets hindbær – accent */
   --rasp-hover: #931F3C;
   --rasp-light: #F2A7B8;   /* accent på mørk bund */
-  --body: #3D5562;
-  --meta: #5A6F7A;
-  --line: #D8E0E4;
-  --line-soft: #E4E9EC;
-  --dark-text: #B9C9D1;
-  --dark-line: #1D3D4E;
-  --display: 'Newsreader', Georgia, serif;
-  --sans: 'Figtree', 'Helvetica Neue', Helvetica, sans-serif;
+  --body: #585551;         /* heartfelt.biz brødtekst */
+  --meta: #736F69;         /* heartfelt.biz #848079, mørkere for kontrast */
+  --line: #E0DDD8;
+  --line-soft: #ECEAE6;
+  --dark-text: #CFE0E8;
+  --dark-line: #2A6582;
+  --display: 'Barlow', 'DIN Next', 'Helvetica Neue', sans-serif;
+  --serif: 'Enriqueta', Georgia, serif;
+  --sans: 'Barlow', 'Helvetica Neue', Helvetica, sans-serif;
   --gutter: clamp(20px, 5vw, 72px);
   --ease-out: cubic-bezier(.215, .61, .355, 1);   /* power3.out – indgange */
   --ease-move: cubic-bezier(.16, 1, .3, 1);       /* expo.out – tilstandsskift */
@@ -42,7 +44,7 @@ a:hover { color: var(--ink); }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--rasp); outline-offset: 3px; border-radius: 4px; }
 p { margin: 0; }
 h1, h2, h3 { margin: 0; font-weight: inherit; }
-em { font-style: italic; }
+em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spacing: -0.01em; }
 
 .skip {
   position: absolute; left: 16px; top: -60px;
@@ -58,21 +60,22 @@ em { font-style: italic; }
 /* Display-typografi */
 .h2, .h2-xl, .hero h1, .rec-name, .tier-name, .company-name, .step-num, .pillar-num, .picker-title, .signature-name {
   font-family: var(--display);
-  font-weight: 400;
-  font-optical-sizing: auto;
+  font-weight: 300;
+  color: var(--petrol);
 }
 .h2 {
   font-size: clamp(34px, 4vw, 54px);
   line-height: 1.06; letter-spacing: -0.02em;
   text-wrap: balance;
 }
-.h2 em, .h2-xl em { color: var(--petrol); }
+.h2 em, .h2-xl em, .hero h1 em, .manifesto-lead em { color: var(--body); font-size: .9em; }
 .h2-xl {
   font-size: clamp(42px, 6.2vw, 88px);
   line-height: 1; letter-spacing: -0.025em;
   max-width: 900px; text-wrap: balance;
 }
-.h2-xl em { color: var(--rasp-light); }
+.h2-xl { color: var(--white); }
+.section-dark .h2-xl em { color: var(--rasp-light); }
 
 /* Knapper */
 .btn {
@@ -129,7 +132,7 @@ em { font-style: italic; }
   position: absolute; right: 0; top: calc(100% + 8px); z-index: 20;
   margin: 0; padding: 6px; list-style: none; min-width: 168px;
   background: var(--white); border-radius: 14px;
-  box-shadow: 0 0 0 1px var(--line), 0 20px 40px -20px rgba(8, 36, 51, .35);
+  box-shadow: 0 0 0 1px var(--line), 0 20px 40px -20px rgba(45, 40, 35, .35);
 }
 .lang-menu[hidden] { display: none; }
 .lang-menu a {
@@ -170,11 +173,11 @@ em { font-style: italic; }
 .kicker { font-size: 15px; font-weight: 600; color: var(--petrol); }
 .hero h1 {
   font-size: clamp(48px, 7.4vw, 104px);
-  line-height: .98; letter-spacing: -0.03em;
+  line-height: 1; letter-spacing: -0.02em;
 }
 .hero h1 .line { display: block; overflow: hidden; padding-bottom: .06em; margin-bottom: -.06em; }
 .hero h1 .line > span { display: inline-block; }
-.swash-word { position: relative; display: inline-block; color: var(--rasp); }
+.hero h1 .swash-word { position: relative; display: inline-block; color: var(--rasp); font-size: .88em; }
 .swash {
   position: absolute; left: -2%; bottom: -.16em; width: 104%; height: .32em;
   overflow: visible; fill: none; stroke: var(--rasp); stroke-width: 3.5;
@@ -186,7 +189,7 @@ em { font-style: italic; }
 .picker {
   background: var(--white); border-radius: 28px; padding: 32px;
   display: flex; flex-direction: column; gap: 22px;
-  box-shadow: 0 1px 0 var(--line), 0 30px 60px -40px rgba(8, 36, 51, .35);
+  box-shadow: 0 1px 0 var(--line), 0 30px 60px -40px rgba(45, 40, 35, .35);
 }
 .picker-title { font-size: 28px; letter-spacing: -0.015em; line-height: 1.1; }
 .size-buttons {
@@ -202,7 +205,7 @@ em { font-style: italic; }
 .size-buttons button:hover { color: var(--ink); }
 .size-buttons button[aria-pressed="true"] {
   background: var(--white); color: var(--ink);
-  box-shadow: 0 1px 2px rgba(8, 36, 51, .12), 0 0 0 1px var(--line);
+  box-shadow: 0 1px 2px rgba(45, 40, 35, .12), 0 0 0 1px var(--line);
 }
 .rec { display: flex; flex-direction: column; gap: 8px; min-height: 212px; }
 .rec[hidden] { display: none; }
@@ -248,11 +251,11 @@ em { font-style: italic; }
 /* Manifest */
 .manifesto { display: flex; flex-direction: column; gap: clamp(40px, 5vw, 64px); }
 .manifesto-lead {
-  font-family: var(--display); font-weight: 400; font-optical-sizing: auto;
+  font-family: var(--display); font-weight: 300; color: var(--petrol);
   font-size: clamp(32px, 4.4vw, 60px); line-height: 1.08; letter-spacing: -0.02em;
   max-width: 1040px; text-wrap: balance;
 }
-.manifesto-lead em { color: var(--petrol); }
+.manifesto-lead em { color: var(--body); }
 .manifesto-foot {
   display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 64px; align-items: end;
   border-top: 1px solid var(--ink); padding-top: 24px;
@@ -261,7 +264,7 @@ em { font-style: italic; }
 .manifesto-foot .muted { font-size: 18px; max-width: 580px; }
 .tagline {
   display: inline-flex; align-items: center; gap: 10px;
-  font-family: var(--display); font-style: italic; font-size: 22px; color: var(--ink); white-space: nowrap;
+  font-family: var(--serif); font-size: 20px; color: var(--body); white-space: nowrap;
 }
 @media (max-width: 420px) { .tagline { white-space: normal; } }
 .tagline::before {
@@ -278,7 +281,7 @@ em { font-style: italic; }
   display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 40px;
 }
 .pillar { border-top: 1px solid var(--ink); padding-top: 20px; display: flex; flex-direction: column; gap: 10px; }
-.pillar-num { font-size: 20px; color: var(--petrol); font-style: italic; }
+.pillar-num { font-family: var(--serif); font-size: 18px; color: var(--sky); }
 .pillar h3 { font-size: 21px; font-weight: 700; line-height: 1.25; }
 .pillar p { color: var(--body); }
 
@@ -290,7 +293,7 @@ em { font-style: italic; }
   box-shadow: 0 0 0 1px var(--line);
   transition: box-shadow .4s var(--ease-move), transform .4s var(--ease-move);
 }
-.tier.is-active { box-shadow: 0 0 0 2px var(--petrol), 0 30px 60px -40px rgba(8, 36, 51, .45); transform: translateY(-4px); }
+.tier.is-active { box-shadow: 0 0 0 2px var(--petrol), 0 30px 60px -40px rgba(45, 40, 35, .45); transform: translateY(-4px); }
 .tier-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; min-height: 30px; }
 .tier-size { font-size: 14px; font-weight: 600; color: var(--meta); }
 .badge {
@@ -324,7 +327,7 @@ em { font-style: italic; }
 }
 @media (max-width: 960px) { .services { grid-template-columns: 1fr; } }
 .service-list h3 {
-  font-family: var(--display); font-size: 26px; font-style: italic; color: var(--petrol);
+  font-family: var(--serif); font-size: 22px; color: var(--petrol);
   padding-bottom: 12px; border-bottom: 1px solid var(--ink);
 }
 .service-list ul { list-style: none; margin: 0; padding: 0; }
@@ -340,7 +343,7 @@ em { font-style: italic; }
   content: ""; position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%;
   background: var(--petrol);
 }
-.step-num { font-size: 52px; color: var(--petrol); line-height: 1; font-style: italic; }
+.step-num { font-family: var(--serif); font-size: 46px; color: var(--sky); line-height: 1; }
 .steps h3 { font-size: 19px; font-weight: 700; }
 
 /* Om Heidi */
@@ -348,18 +351,18 @@ em { font-style: italic; }
 @media (max-width: 860px) { .about { grid-template-columns: 1fr; } }
 .portrait {
   width: 100%; max-width: 440px; height: auto; aspect-ratio: 1; border-radius: 28px; object-fit: cover;
-  justify-self: end; background: #D5DFE4;
-  box-shadow: 0 40px 70px -50px rgba(8, 36, 51, .55);
+  justify-self: end; background: var(--tint);
+  box-shadow: 0 40px 70px -50px rgba(45, 40, 35, .55);
 }
 @media (max-width: 860px) { .portrait { justify-self: start; } }
 .portrait-placeholder {
-  background: #D5DFE4; display: flex; align-items: center; justify-content: center;
+  background: var(--tint); display: flex; align-items: center; justify-content: center;
   text-align: center; padding: 24px; color: var(--body); font-size: 15px; font-weight: 600;
 }
 .about-copy { display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
 .about-copy .muted { font-size: 18px; max-width: 560px; }
 .signature { display: flex; flex-direction: column; gap: 2px; padding-top: 8px; font-size: 15px; color: var(--meta); }
-.signature-name { font-size: 28px; font-style: italic; color: var(--ink); }
+.signature-name { font-family: var(--display); font-size: 30px; color: var(--petrol); }
 
 /* CTA */
 .section-dark .wrap { position: relative; z-index: 1; }
