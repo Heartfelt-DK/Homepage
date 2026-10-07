@@ -302,7 +302,7 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
   padding: 5px 12px; border-radius: 999px;
 }
 .badge::before {
-  content: ""; width: 10px; height: 9px; background: var(--rasp-light);
+  content: ""; width: 10px; height: 9px; background: var(--rasp);
   -webkit-mask: url("assets/favicon.svg") center / contain no-repeat;
           mask: url("assets/favicon.svg") center / contain no-repeat;
 }
