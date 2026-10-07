@@ -1,5 +1,10 @@
 document.documentElement.classList.add('js');
 
+// Tidsbegrænset indhold (fx annonceringslinjen): fjernes automatisk fra tidspunktet i data-until
+document.querySelectorAll('[data-until]').forEach(el => {
+  if (Date.now() >= Date.parse(el.dataset.until)) el.remove();
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   // Hero-indgang: starter når fonte er klar, så linjerne ikke hopper
   const ready = () => requestAnimationFrame(() => document.documentElement.classList.add('is-ready'));
