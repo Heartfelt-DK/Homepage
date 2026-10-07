@@ -490,3 +490,62 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 .course-body { padding: clamp(28px, 4vw, 48px); display: flex; flex-direction: column; gap: 18px; justify-content: center; }
 .course-body > p:not(.kicker) { color: var(--body); max-width: 600px; }
 @media (max-width: 760px) { .course-card { grid-template-columns: 1fr; } .course-img { height: 260px; } }
+
+/* Om Heidi */
+
+/* Kort fortalt */
+.facts-section { padding-top: clamp(48px, 6vw, 72px); padding-bottom: clamp(48px, 6vw, 72px); }
+.facts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 32px 40px; }
+.facts li { display: flex; flex-direction: column; gap: 6px; border-top: 2px solid var(--petrol); padding-top: 16px; }
+.fact-num { font-family: var(--display); font-weight: 300; font-size: clamp(36px, 4vw, 52px); line-height: 1; color: var(--petrol); }
+.fact-label { font-size: 16px; color: var(--body); }
+
+/* Karriere-tidslinje */
+.timeline { list-style: none; margin: 0; padding: 0 0 0 24px; border-left: 2px solid var(--line); display: flex; flex-direction: column; gap: 26px; }
+.timeline li { position: relative; display: flex; flex-direction: column; gap: 2px; }
+.timeline li::before {
+  content: ""; position: absolute; left: -31px; top: 7px; width: 12px; height: 12px; border-radius: 50%;
+  background: var(--paper); border: 2px solid var(--petrol);
+}
+.timeline li:first-child::before { background: var(--rasp); border-color: var(--rasp); }
+.tl-year { font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--petrol); }
+.tl-role { font-size: 15px; font-weight: 600; color: var(--meta); }
+.tl-org { font-family: var(--display); font-size: 24px; line-height: 1.2; color: var(--ink); }
+.tl-note { font-family: var(--serif); font-size: 16px; line-height: 1.45; color: var(--body); max-width: 520px; }
+
+/* Citat */
+.quote-card { margin: 0 auto; max-width: 860px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.quote-card blockquote { margin: 0; }
+.quote-card blockquote p { font-family: var(--serif); font-size: clamp(30px, 4.2vw, 52px); line-height: 1.15; color: var(--ink); letter-spacing: -0.01em; }
+.quote-card figcaption { max-width: 560px; color: var(--body); font-size: 16px; }
+
+/* Lyt / Læs & se */
+.media-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 20px; }
+.media-item {
+  background: var(--white); border-radius: 20px; box-shadow: 0 0 0 1px var(--line);
+  padding: 26px 28px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start;
+}
+.media-meta { font-size: 14px; font-weight: 600; color: var(--petrol); }
+.media-title { font-family: var(--display); font-size: 22px; line-height: 1.25; color: var(--ink); flex-grow: 1; padding-bottom: 8px; }
+.media-group { grid-column: 1 / -1; }
+.media-links { list-style: none; margin: 0; padding: 0; width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); gap: 0 32px; }
+.media-links li { border-top: 1px solid var(--line-soft); }
+.media-links a { display: block; padding: 12px 0; text-decoration: none; color: var(--ink); line-height: 1.4; }
+.media-links a::after { content: " →"; color: var(--rasp); }
+.media-links a:hover { color: var(--petrol); }
+.speakers + .event-label, .page-feature-copy .event-label + .dots { margin-top: 0; }
+.page-feature-copy .speakers { margin-bottom: 24px; }
+
+/* Speaker – efter år */
+.talks-head { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px 72px; align-items: start; }
+@media (max-width: 860px) { .talks-head { grid-template-columns: 1fr; } }
+.talks-topics { display: flex; flex-direction: column; gap: 14px; }
+.talks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.talk-year { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 8px 32px; border-top: 1px solid var(--line); padding: 22px 0; }
+.talk-year .year { font-family: var(--display); font-weight: 300; font-size: 32px; line-height: 1; color: var(--petrol); }
+.talk-year ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 18px 40px; }
+.talk-year ul li { display: flex; flex-direction: column; gap: 3px; }
+.talk-event { font-weight: 700; color: var(--ink); }
+.talk-topic { font-family: var(--serif); font-size: 16px; line-height: 1.45; color: var(--body); }
+@media (max-width: 600px) { .talk-year { grid-template-columns: 1fr; } .talk-year .year { font-size: 26px; } }
+
