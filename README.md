@@ -7,6 +7,3 @@ Statisk one-page site for Heartfelt (fraktioneret HR & Talent Acquisition).
 - `script.js` – størrelsesvælger og mobilmenu
 
 Ingen build-trin: åbn `index.html` direkte eller deploy mappen som statisk site.
-
-## Mangler før lancering
-- Link til karrierecoaching i footeren

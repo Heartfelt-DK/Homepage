@@ -381,6 +381,15 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 }
 @media (max-width: 760px) { .cta-heart { opacity: .45; width: 110vw; right: -30%; } }
 
+/* Undersider (karrierecoaching) */
+.page-intro { padding-top: clamp(40px, 7vw, 96px); }
+.page-intro-inner { display: flex; flex-direction: column; gap: 28px; }
+.page-intro-copy { display: flex; flex-direction: column; gap: 16px; max-width: 680px; font-size: 19px; color: var(--body); }
+.page-note { max-width: 720px; border-top: 1px solid var(--line); padding-top: 24px; }
+.page-feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 32px 72px; align-items: start; }
+.page-feature-copy { display: flex; flex-direction: column; gap: 16px; font-size: 18px; color: var(--body); }
+@media (max-width: 860px) { .page-feature { grid-template-columns: 1fr; } }
+
 /* Footer – én sandfarvet flade med det originale logo; CTA-hjertet står på overgangen */
 .site-footer { font-size: 15px; background: #EFE6D6; color: var(--body); }
 .footer-brand { padding: 44px var(--gutter) 28px; }

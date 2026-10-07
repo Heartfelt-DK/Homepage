@@ -29,7 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Hjertelinjen i kontaktsektionen tegnes én gang, når den kommer i syne
   const heart = document.querySelector('.cta-heart');
-  if ('IntersectionObserver' in window) {
+  if (!heart) {
+    // ingen hjertelinje på siden
+  } else if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(entries => {
       if (entries.some(e => e.isIntersecting)) { heart.classList.add('is-drawn'); io.disconnect(); }
     }, { threshold: 0.35 });
