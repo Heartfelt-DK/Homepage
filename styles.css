@@ -379,13 +379,6 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 }
 @media (max-width: 760px) { .cta-heart { opacity: .45; width: 110vw; right: -30%; } }
 
-/* Sandfarvet CTA-banner */
-.section-sand { background: #E8DCC6; color: var(--ink); }
-.section-sand .h2-xl { color: var(--petrol); }
-.section-sand .cta-lead { color: var(--body); }
-.section-sand .text-link-light { color: var(--ink); border-color: #C9B99C; }
-.section-sand .text-link-light:hover { color: var(--ink); border-color: var(--ink); }
-
 /* Footer */
 .site-footer { padding: 40px var(--gutter) 48px; background: var(--petrol-deep); color: var(--dark-text); font-size: 15px; }
 .footer-inner {
