@@ -15,7 +15,6 @@
   --meta: #736F69;         /* heartfelt.biz #848079, mørkere for kontrast */
   --line: #E0DDD8;
   --line-soft: #ECEAE6;
-  --sand: #E8DCC6;        /* sandfarve – footer */
   --dark-text: #CFE0E8;
   --dark-line: #2A6582;
   --display: 'Barlow', 'DIN Next', 'Helvetica Neue', sans-serif;
@@ -380,15 +379,22 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 }
 @media (max-width: 760px) { .cta-heart { opacity: .45; width: 110vw; right: -30%; } }
 
+/* Sandfarvet CTA-banner */
+.section-sand { background: #E8DCC6; color: var(--ink); }
+.section-sand .h2-xl { color: var(--petrol); }
+.section-sand .cta-lead { color: var(--body); }
+.section-sand .text-link-light { color: var(--ink); border-color: #C9B99C; }
+.section-sand .text-link-light:hover { color: var(--ink); border-color: var(--ink); }
+
 /* Footer */
-.site-footer { padding: 40px var(--gutter) 48px; background: var(--sand); color: var(--ink); font-size: 15px; }
+.site-footer { padding: 40px var(--gutter) 48px; background: var(--petrol-deep); color: var(--dark-text); font-size: 15px; }
 .footer-inner {
   border-top: 1px solid var(--dark-line); padding-top: 32px;
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 40px;
 }
 .footer-col { display: flex; flex-direction: column; gap: 6px; }
-.site-footer a { color: var(--petrol); padding: 4px 0; }
-.site-footer a:hover { color: var(--rasp); }
+.site-footer a { color: var(--paper); padding: 4px 0; }
+.site-footer a:hover { color: var(--white); }
 .logo-footer { width: 130px; height: auto; margin-bottom: 6px; }
 
 /* Bevægelse – én hero-bevægelse, så står alt stille.
