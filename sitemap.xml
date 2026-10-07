@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.heartfelt.biz/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.heartfelt.biz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.heartfelt.biz/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.heartfelt.biz/en/"/>
+  </url>
+  <url>
+    <loc>https://www.heartfelt.biz/en/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.heartfelt.biz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.heartfelt.biz/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.heartfelt.biz/en/"/>
+  </url>
+  <url>
+    <loc>https://www.heartfelt.biz/om-heidi/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.heartfelt.biz/om-heidi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.heartfelt.biz/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.heartfelt.biz/en/about/"/>
+  </url>
+  <url>
+    <loc>https://www.heartfelt.biz/en/about/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.heartfelt.biz/om-heidi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.heartfelt.biz/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.heartfelt.biz/en/about/"/>
+  </url>
+  <url>
+    <loc>https://www.heartfelt.biz/events/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.heartfelt.biz/events/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.heartfelt.biz/en/events/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.heartfelt.biz/en/events/"/>
+  </url>
+  <url>
+    <loc>https://www.heartfelt.biz/en/events/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.heartfelt.biz/events/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.heartfelt.biz/en/events/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.heartfelt.biz/en/events/"/>
+  </url>
+  <url>
+    <loc>https://www.heartfelt.biz/karrierecoaching/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.heartfelt.biz/karrierecoaching/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.heartfelt.biz/en/career-coaching/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.heartfelt.biz/en/career-coaching/"/>
+  </url>
+  <url>
+    <loc>https://www.heartfelt.biz/en/career-coaching/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.heartfelt.biz/karrierecoaching/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.heartfelt.biz/en/career-coaching/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.heartfelt.biz/en/career-coaching/"/>
+  </url>
+</urlset>
