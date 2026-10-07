@@ -373,25 +373,26 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 .cta { display: flex; flex-direction: column; gap: 28px; align-items: flex-start; }
 .cta-lead { font-size: 19px; color: var(--dark-text); max-width: 560px; }
 .cta-heart {
-  position: absolute; right: -4%; bottom: -6%; width: min(760px, 70vw); height: auto;
+  position: absolute; right: -4%; bottom: 0; width: min(760px, 70vw); height: auto;
+  transform: translateY(6.5%); /* grundlinjen ligger på overgangen til footeren */
   fill: none; stroke: var(--rasp); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
   opacity: .9; pointer-events: none;
 }
 @media (max-width: 760px) { .cta-heart { opacity: .45; width: 110vw; right: -30%; } }
 
-/* Footer – lys stribe med det originale logo, blå stribe med kontakt */
-.site-footer { font-size: 15px; }
-.footer-brand { padding: 40px var(--gutter); background: #EFE6D6; }
+/* Footer – én sandfarvet flade med det originale logo; CTA-hjertet står på overgangen */
+.site-footer { font-size: 15px; background: #EFE6D6; color: var(--body); }
+.footer-brand { padding: 44px var(--gutter) 28px; }
 .footer-brand-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 40px; }
 .footer-slogan {
   font-family: var(--display); font-size: clamp(22px, 2.6vw, 32px); line-height: 1.2;
   letter-spacing: -0.01em; color: var(--petrol);
 }
 .footer-slogan em { color: var(--rasp); }
-.footer-base { padding: 24px var(--gutter) 32px; background: var(--petrol-deep); color: var(--dark-text); }
-.footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 40px; }
-.site-footer a { color: var(--paper); padding: 4px 0; }
-.site-footer a:hover { color: var(--white); }
+.footer-base { padding: 0 var(--gutter) 32px; }
+.footer-inner { border-top: 1px solid #DDD0B8; padding-top: 18px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 40px; }
+.site-footer a { color: var(--petrol); padding: 4px 0; }
+.site-footer a:hover { color: var(--rasp); }
 .logo-footer { width: 170px; height: auto; display: block; }
 
 /* Bevægelse – én hero-bevægelse, så står alt stille.
