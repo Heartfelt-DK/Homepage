@@ -264,8 +264,9 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 .manifesto-foot .muted { font-size: 18px; max-width: 580px; }
 .tagline {
   display: inline-flex; align-items: center; gap: 10px;
-  font-family: var(--serif); font-size: 20px; color: var(--body); white-space: nowrap;
+  font-family: var(--display); font-size: 22px; letter-spacing: -0.01em; color: var(--petrol); white-space: nowrap;
 }
+.tagline em { color: var(--rasp); } /* samme skrivemåde som i footeren */
 @media (max-width: 420px) { .tagline { white-space: normal; } }
 .tagline::before {
   content: ""; width: 16px; height: 15px; flex: none; background: var(--rasp);
