@@ -97,6 +97,16 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 .text-link-light:hover { color: var(--white); border-color: var(--paper); }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
 
+/* Annonceringslinje øverst (fjernes når eventet er overstået) */
+.announce {
+  display: block; padding: 10px var(--gutter); text-align: center; text-decoration: none;
+  background: var(--petrol-deep); color: var(--dark-text); font-size: 14px;
+}
+.announce strong { color: var(--white); font-weight: 600; }
+.announce span { color: var(--rasp-light); margin-left: 4px; transition: margin-left .2s var(--ease-out); }
+.announce:hover { color: var(--white); }
+.announce:hover span { margin-left: 8px; }
+
 /* Header */
 .site-header { padding: 22px var(--gutter); }
 .header-inner {
@@ -116,8 +126,12 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 /* Diskret link til privatpersoner – adskilt fra virksomhedsmenuen */
 .site-header .main-nav a.nav-aside { font-size: 14px; color: var(--meta); padding-left: 24px; border-left: 1px solid var(--line); }
 .site-header .main-nav a.nav-aside:hover { color: var(--petrol); }
-@media (min-width: 861px) and (max-width: 1080px) { .site-header .main-nav a.nav-aside { display: none; } } /* for trangt – footerlinket dækker */
-@media (max-width: 860px) {
+@media (min-width: 1025px) and (max-width: 1320px) { /* for trangt til alt på én linje – footerlinket dækker privatpersoner */
+  .site-header .main-nav a.nav-aside { display: none; }
+  .main-nav { column-gap: 18px; }
+  .header-inner { column-gap: 24px; }
+}
+@media (max-width: 1024px) {
   .site-header .main-nav a.nav-aside { order: 10; margin-top: 16px; padding: 14px 0 6px; border-left: 0; border-bottom: 0; border-top: 1px solid var(--line); }
 }
 
@@ -152,7 +166,7 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 .lang-menu a[aria-current="true"] { font-weight: 700; }
 .lang-menu a[aria-current="true"]::after { content: "✓"; margin-left: auto; color: var(--petrol); }
 
-@media (max-width: 860px) {
+@media (max-width: 1024px) { /* mobilmenu: fra 1024px, så menuen aldrig deler sig på to linjer */
   .menu-toggle {
     display: inline-flex; align-items: center; min-height: 44px;
     padding: 0 18px; border-radius: 999px; border: 1.5px solid var(--line);
@@ -438,3 +452,41 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 
 .tier-price a { color: var(--ink); text-decoration: none; }
 .tier-price a:hover { color: var(--rasp); }
+
+/* Events (Heartfelt Collective) */
+.event-card {
+  background: var(--white); border-radius: 24px; box-shadow: 0 0 0 1px var(--line);
+  padding: clamp(28px, 4vw, 48px); display: grid; grid-template-columns: auto minmax(0, 1fr);
+  gap: 24px clamp(28px, 4vw, 56px); align-items: start;
+}
+.event-date {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 108px; aspect-ratio: 1; border-radius: 20px; background: var(--petrol-deep); color: var(--white);
+}
+.event-date-day { font-family: var(--display); font-weight: 300; font-size: 48px; line-height: 1; }
+.event-date-month { font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--rasp-light); margin-top: 4px; }
+.event-body { display: flex; flex-direction: column; gap: 18px; }
+.event-title { font-family: var(--display); font-weight: 300; color: var(--petrol); font-size: clamp(28px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -0.02em; text-wrap: balance; }
+.event-title em { color: var(--rasp); }
+.event-meta { display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 0; padding: 0; list-style: none; }
+.event-meta li { font-size: 14px; font-weight: 600; color: var(--ink); background: var(--tint); border-radius: 999px; padding: 6px 14px; }
+.event-body > p { color: var(--body); max-width: 640px; }
+.speakers { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 0 40px; }
+.speaker { border-top: 1px solid var(--line); padding: 16px 0 18px; display: flex; flex-direction: column; gap: 4px; }
+.speaker-name { font-weight: 700; }
+.speaker-name span { font-weight: 500; color: var(--meta); }
+.speaker-topic { font-family: var(--serif); color: var(--body); font-size: 16px; line-height: 1.45; }
+.event-label { font-size: 15px; font-weight: 700; color: var(--ink); }
+@media (max-width: 640px) {
+  .event-card { grid-template-columns: 1fr; }
+  .event-date { width: 88px; }
+  .event-date-day { font-size: 38px; }
+}
+.course-card {
+  background: var(--white); border-radius: 24px; box-shadow: 0 0 0 1px var(--line); overflow: hidden;
+  display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); align-items: stretch;
+}
+.course-img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 260px; }
+.course-body { padding: clamp(28px, 4vw, 48px); display: flex; flex-direction: column; gap: 18px; justify-content: center; }
+.course-body > p:not(.kicker) { color: var(--body); max-width: 600px; }
+@media (max-width: 760px) { .course-card { grid-template-columns: 1fr; } .course-img { height: 260px; } }
