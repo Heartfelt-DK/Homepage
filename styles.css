@@ -292,8 +292,8 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 @media (max-width: 420px) { .tagline { white-space: normal; } }
 .tagline::before {
   content: ""; width: 16px; height: 15px; flex: none; background: var(--rasp);
-  -webkit-mask: url("assets/favicon.svg") center / contain no-repeat;
-          mask: url("assets/favicon.svg") center / contain no-repeat;
+  -webkit-mask: url("assets/brand/heartfelt-hjerte.png") center / contain no-repeat;
+          mask: url("assets/brand/heartfelt-hjerte.png") center / contain no-repeat;
 }
 
 /* Model */
@@ -325,9 +325,9 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
   padding: 5px 12px; border-radius: 999px;
 }
 .badge::before {
-  content: ""; width: 10px; height: 9px; background: var(--rasp);
-  -webkit-mask: url("assets/favicon.svg") center / contain no-repeat;
-          mask: url("assets/favicon.svg") center / contain no-repeat;
+  content: ""; width: 12px; height: 11px; background: var(--rasp);
+  -webkit-mask: url("assets/brand/heartfelt-hjerte.png") center / contain no-repeat;
+          mask: url("assets/brand/heartfelt-hjerte.png") center / contain no-repeat;
 }
 .badge[hidden] { display: none; }
 .tier-name { font-size: 40px; letter-spacing: -0.02em; line-height: 1.05; }
