@@ -11,6 +11,7 @@
   --rasp: #AE2B4A;         /* logoets hindbær – accent */
   --rasp-hover: #931F3C;
   --rasp-light: #F2A7B8;   /* accent på mørk bund */
+  --leaf-light: #A8DDB5;   /* lys grøn – fremhævning på mørk bund */
   --body: #585551;         /* heartfelt.biz brødtekst */
   --meta: #736F69;         /* heartfelt.biz #848079, mørkere for kontrast */
   --line: #E0DDD8;
@@ -75,7 +76,7 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
   max-width: 900px; text-wrap: balance;
 }
 .h2-xl { color: var(--white); }
-.section-dark .h2-xl em { color: var(--rasp-light); }
+.section-dark .h2-xl em { color: var(--leaf-light); }
 
 /* Knapper */
 .btn {
