@@ -549,3 +549,20 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 .talk-topic { font-family: var(--serif); font-size: 16px; line-height: 1.45; color: var(--body); }
 @media (max-width: 600px) { .talk-year { grid-template-columns: 1fr; } .talk-year .year { font-size: 26px; } }
 
+
+/* Partnerskaber */
+.partners-wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 32px 72px; align-items: start; }
+@media (max-width: 860px) { .partners-wrap { grid-template-columns: 1fr; } }
+.partners { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+.partner {
+  background: var(--white); border-radius: 20px; box-shadow: 0 0 0 1px var(--line);
+  padding: 28px 30px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start;
+}
+.partner-tag {
+  font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--petrol); background: var(--tint); border-radius: 999px; padding: 4px 12px;
+}
+.partner-name { font-family: var(--display); font-size: 26px; line-height: 1.2; color: var(--ink); }
+.partner-note { font-family: var(--serif); font-size: 16px; line-height: 1.5; color: var(--body); padding-bottom: 6px; }
+
+.partner-logo { display: block; width: auto; height: 72px; margin: 6px 0 4px; }
