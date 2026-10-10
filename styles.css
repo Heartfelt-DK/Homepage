@@ -193,6 +193,7 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }
 .hero-copy { display: flex; flex-direction: column; gap: 28px; align-items: flex-start; }
 .kicker { font-size: 15px; font-weight: 600; color: var(--petrol); }
+@media (max-width: 767px) { .kicker-line { display: block; } } /* mobil: målgruppen på egen linje */
 .hero h1 {
   font-size: clamp(48px, 7.4vw, 104px);
   line-height: 1; letter-spacing: -0.02em;
