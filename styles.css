@@ -631,3 +631,10 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 .compare-table thead .is-us { color: var(--rasp); border-top: 2px solid var(--rasp); border-radius: 14px 14px 0 0; }
 .compare-table tbody tr:last-child .is-us { border-bottom: 2px solid var(--rasp); border-radius: 0 0 14px 14px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* Troværdighed i toppen + resultater */
+.hero-proof { margin-top: 28px; font-size: 14px; font-weight: 600; letter-spacing: .01em; color: var(--meta); }
+.hero-proof span { margin: 0 6px; color: var(--rasp); }
+.results { margin-top: 8px; padding-top: 40px; border-top: 1px solid var(--line); }
+.results .fact-num { color: var(--rasp); }
+.company-name { text-wrap: balance; }
