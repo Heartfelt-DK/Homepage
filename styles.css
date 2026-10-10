@@ -308,7 +308,7 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
   font-family: var(--display); font-size: 22px; letter-spacing: -0.01em; color: var(--rasp); white-space: nowrap;
 }
 .tagline em { color: var(--petrol); } /* som i logoet: hjertet rødt, forretningen blå */
-@media (max-width: 420px) { .tagline { white-space: normal; } }
+@media (max-width: 600px) { .tagline { white-space: normal; align-items: flex-start; } .tagline::before { margin-top: .35em; } .tagline em, .footer-slogan em { display: block; } } /* mobil: sloganet på to linjer */
 .tagline::before {
   content: ""; width: 16px; height: 15px; flex: none; background: var(--rasp);
   -webkit-mask: url("assets/brand/heartfelt-hjerte.png") center / contain no-repeat;
