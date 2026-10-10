@@ -610,3 +610,8 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 .soon-card > p:not(.kicker):not(.soon-sub) { color: var(--body); }
 .soon-sub { font-family: var(--serif); font-size: 18px; line-height: 1.4; color: var(--body); margin-top: -4px; }
 .soon-card .actions { margin-top: auto; padding-top: 8px; }
+
+/* Diskret henvisning til events i forsidens afslutning */
+.cta-note { margin-top: 28px; font-size: 15px; color: var(--dark-text); }
+.cta-note a { color: var(--white); text-decoration: none; border-bottom: 1px solid var(--dark-line); padding-bottom: 2px; }
+.cta-note a:hover { border-color: var(--rasp-light); }
