@@ -642,3 +642,16 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 .experience-proof { grid-column: 2 / -1; margin: 4px 0 0; padding-top: 16px; border-top: 1px solid var(--line-soft); font-size: 14px; font-weight: 600; color: var(--meta); }
 .experience-proof span { margin: 0 8px; color: var(--rasp); }
 @media (max-width: 960px) { .experience-proof { grid-column: 1 / -1; } }
+
+/* Hero: opsætning (kendte modeller) → pointe (fraktioneret) */
+.hero h1.h1-statement { font-size: clamp(48px, 7.4vw, 104px); }
+.hero h1.h1-statement .line-setup { font-size: .46em; line-height: 1.25; color: var(--meta); letter-spacing: -0.01em; }
+.hero h1.h1-statement .line-setup + .line:not(.line-setup) { margin-top: .12em; }
+.hero h1.h1-statement .swash-word { font-size: 1em; }
+.hero h1.h1-statement .line-payoff { color: var(--petrol); }
+/* Pause mellem opsætning og pointe – kun når bevægelse er tilladt */
+@media (prefers-reduced-motion: no-preference) {
+  .js.is-ready .hero h1.h1-statement .line:nth-child(3) > span { transition-delay: .55s; }
+  .js.is-ready .hero h1.h1-statement .line:nth-child(4) > span { transition-delay: .65s; }
+  .js.is-ready .hero h1.h1-statement .swash path { transition-delay: 1.3s; }
+}
