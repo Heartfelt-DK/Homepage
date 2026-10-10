@@ -303,9 +303,9 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 .manifesto-foot .muted { font-size: 18px; max-width: 580px; }
 .tagline {
   display: inline-flex; align-items: center; gap: 10px;
-  font-family: var(--display); font-size: 22px; letter-spacing: -0.01em; color: var(--petrol); white-space: nowrap;
+  font-family: var(--display); font-size: 22px; letter-spacing: -0.01em; color: var(--rasp); white-space: nowrap;
 }
-.tagline em { color: var(--rasp); } /* samme skrivemåde som i footeren */
+.tagline em { color: var(--petrol); } /* som i logoet: hjertet rødt, forretningen blå */
 @media (max-width: 420px) { .tagline { white-space: normal; } }
 .tagline::before {
   content: ""; width: 16px; height: 15px; flex: none; background: var(--rasp);
@@ -435,9 +435,9 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 .footer-brand-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 40px; }
 .footer-slogan {
   font-family: var(--display); font-size: clamp(22px, 2.6vw, 32px); line-height: 1.2;
-  letter-spacing: -0.01em; color: var(--petrol);
+  letter-spacing: -0.01em; color: var(--rasp);
 }
-.footer-slogan em { color: var(--rasp); }
+.footer-slogan em { color: var(--petrol); }
 .footer-base { padding: 0 var(--gutter) 32px; }
 .footer-inner { border-top: 1px solid #DDD0B8; padding-top: 18px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 40px; }
 .site-footer a { color: var(--petrol); padding: 4px 0; }
