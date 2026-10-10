@@ -56,4 +56,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.heartfelt.biz/en/career-coaching/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.heartfelt.biz/en/career-coaching/"/>
   </url>
+  <url>
+    <loc>https://www.heartfelt.biz/privatlivspolitik/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.heartfelt.biz/privatlivspolitik/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.heartfelt.biz/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.heartfelt.biz/en/privacy-policy/"/>
+  </url>
+  <url>
+    <loc>https://www.heartfelt.biz/en/privacy-policy/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.heartfelt.biz/privatlivspolitik/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.heartfelt.biz/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.heartfelt.biz/en/privacy-policy/"/>
+  </url>
 </urlset>
