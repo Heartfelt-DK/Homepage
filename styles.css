@@ -638,3 +638,7 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
 .results { margin-top: 8px; padding-top: 40px; border-top: 1px solid var(--line); }
 .results .fact-num { color: var(--rasp); }
 .company-name { text-wrap: balance; }
+
+.experience-proof { grid-column: 2 / -1; margin: 4px 0 0; padding-top: 16px; border-top: 1px solid var(--line-soft); font-size: 14px; font-weight: 600; color: var(--meta); }
+.experience-proof span { margin: 0 8px; color: var(--rasp); }
+@media (max-width: 960px) { .experience-proof { grid-column: 1 / -1; } }
