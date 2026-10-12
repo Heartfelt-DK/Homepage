@@ -655,3 +655,17 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
   .js.is-ready .hero h1.h1-statement .line:nth-child(4) > span { transition-delay: .65s; }
   .js.is-ready .hero h1.h1-statement .swash path { transition-delay: 1.3s; }
 }
+
+/* Klummer (genudgivne Ofir-artikler) */
+.article-title { max-width: 900px; text-wrap: balance; }
+.page-intro .kicker a { color: inherit; text-decoration: none; }
+.page-intro .kicker a:hover { text-decoration: underline; }
+.article { max-width: 720px; display: flex; flex-direction: column; gap: 18px; font-size: 18px; line-height: 1.65; color: var(--body); }
+.article h2 { font-family: var(--display); font-weight: 400; font-size: clamp(24px, 3vw, 30px); line-height: 1.2; color: var(--petrol); margin-top: 22px; }
+.article strong { color: var(--ink); }
+.article ol, .article ul { margin: 0; padding-left: 1.4em; display: flex; flex-direction: column; gap: 10px; }
+.article li::marker { color: var(--petrol); font-weight: 600; }
+.article a { color: var(--petrol); }
+.article-more { max-width: 720px; margin-top: clamp(48px, 7vw, 80px); padding-top: 32px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+.article-more h2 { font-family: var(--display); font-weight: 400; font-size: 24px; color: var(--ink); }
+.article-more .media-links { grid-template-columns: 1fr; }
