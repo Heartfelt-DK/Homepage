@@ -378,7 +378,20 @@ em { font-style: normal; font-family: var(--serif); font-weight: 400; letter-spa
   padding-bottom: 12px; border-bottom: 1px solid var(--ink);
 }
 .service-list ul { list-style: none; margin: 0; padding: 0; }
-.service-list li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.service-list li { border-bottom: 1px solid var(--line); }
+.service-list summary {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding: 14px 0; cursor: pointer; list-style: none;
+}
+.service-list summary::-webkit-details-marker { display: none; }
+.service-list summary::after {
+  content: "+"; flex: none; font-size: 20px; line-height: 1; color: var(--petrol);
+  transition: transform .2s var(--ease-out);
+}
+.service-list details[open] summary::after { transform: rotate(45deg); }
+.service-list summary:hover { color: var(--petrol); }
+.service-list summary:focus-visible { outline: 3px solid var(--rasp); outline-offset: 3px; border-radius: 4px; }
+.service-list details p { margin: 0; padding: 0 32px 16px 0; color: var(--body); font-size: 15px; line-height: 1.55; }
 
 /* Trin */
 .steps {
